@@ -1,56 +1,45 @@
+#include "Arduino.h"
 #include <NewPing.h>
-#include <Servo.h>
-Servo myServo;
-const int trigPin = 11;
-const int echoPin = 8;
-int duration, cm;
-int servoPin = 5;
-int timeSinceObject;
-int ledPin = 3;
-int x = 0;
+#define trigPin 11
+#define echoPin 8
+#define maxDistance 150
+int led = 3;
 int brightness = 0;
-int fadeAmount = 5;
+long duration, cm, inches;
+NewPing sonar(trigPin, echoPin, maxDistance);
 void setup()
 {
-	Serial.begin(9600);
-	myServo.attach(5);
-	pinMode(ledPin, OUTPUT);
+  Serial.begin(9600);
+  pinMode(led, OUTPUT);
 }
 
 void loop()
 {
-	brightness = x + 50;
-	cm = getDistance();
-	cm = microsecondsToCentimeters(timeSinceObject);
-	if (cm != 0)
-	{
-		if (cm <= 90)
-		{
-			myServo.write(1);
-		}
-		else
-			if (cm >= 90)
-			{
-				myServo.write(90);
-			}
-		delay(100);
-	}
-}
-
-long microsecondsToCentimeters(long microseconds)
-{
-	return microseconds / 29 / 2;
-}
-
-int getDistance()
-{
-	pinMode(trigPin, OUTPUT);
-	digitalWrite(trigPin, LOW);
-	delayMicroseconds(2);
-	digitalWrite(trigPin, HIGH);
-	delayMicroseconds(10);
-	digitalWrite(trigPin, LOW);
-	pinMode(echoPin, INPUT);
-	timeSinceObject = pulseIn(echoPin, HIGH);
-	return cm;
+  analogWrite(led, brightness);
+  delay(100);
+  cm = sonar.ping_cm();
+  if (cm != 0 && cm < 125)
+  {
+    if (cm == 20)
+    {
+      digitalWrite(led, 255);
+    }
+    if (cm <= 19 && cm >= 15)
+    {
+      digitalWrite(led, 150);
+    }
+    if (cm <= 14 && cm >= 10)
+    {
+      digitalWrite(led, 80);
+    }
+    if (cm <= 9 && cm >= 5)
+    {
+      digitalWrite(led, 50);
+    }
+    else
+    {
+      digitalWrite(led, LOW);
+    }
+    delay(100);
+  }
 }
