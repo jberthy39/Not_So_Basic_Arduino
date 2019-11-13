@@ -1,4 +1,3 @@
-
 #include <Servo.h>
 Servo myServo;
 int servoData = 0;
@@ -31,6 +30,7 @@ void loop()
 			}
 		delay(100);
 	}
+	Serial.println(cm);
 }
 
 long microsecondsToCentimeters(long microseconds)

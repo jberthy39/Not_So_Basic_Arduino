@@ -1,45 +1,48 @@
-#include "Arduino.h"
+#include <Servo.h>
 #include <NewPing.h>
-#define trigPin 11
-#define echoPin 8
-#define maxDistance 150
+int trigPin = 11;
+int echoPin = 8;
+long duration;
+int cm;
+Servo myServo;
+int servo = 5;
 int led = 3;
-int brightness = 0;
-long duration, cm, inches;
-NewPing sonar(trigPin, echoPin, maxDistance);
+NewPing myHCSR04(trigPin, echoPin);
 void setup()
 {
+  pinMode(11, OUTPUT);
+  pinMode(8, INPUT);
   Serial.begin(9600);
-  pinMode(led, OUTPUT);
+  myServo.attach(5);
+  pinMode(3, OUTPUT);
 }
 
 void loop()
 {
-  analogWrite(led, brightness);
-  delay(100);
-  cm = sonar.ping_cm();
-  if (cm != 0 && cm < 125)
+  cm = myHCSR04.ping_cm();
+  if (cm != 0 && cm < 100)
   {
-    if (cm == 20)
+    if (cm < 15)
     {
-      digitalWrite(led, 255);
-    }
-    if (cm <= 19 && cm >= 15)
-    {
-      digitalWrite(led, 150);
-    }
-    if (cm <= 14 && cm >= 10)
-    {
-      digitalWrite(led, 80);
-    }
-    if (cm <= 9 && cm >= 5)
-    {
-      digitalWrite(led, 50);
+      moveServo();
+      digitalWrite(led, HIGH);
     }
     else
     {
+      stopServo();
       digitalWrite(led, LOW);
     }
-    delay(100);
   }
+  delay(10);
+  Serial.println(cm);
+}
+
+void moveServo()
+{
+  myServo.write(180);
+}
+
+void stopServo()
+{
+  myServo.write(90);
 }
