@@ -31,11 +31,11 @@ In this assignment, we used an LCD screeen to print a simple message: Hello Worl
 
 Credit : [Paul B.](http://wiki.chssigma.com/index.php?title=Paul%27s_Engineering_2_Notebook#Hello_LCD)
 
-`#include <LiquidCrystal.h>
+`#include <LiquidCrystal.h> `
 
-lcd.print("hello world :)");
+`lcd.print("hello world :)"); `
 
-lcd.print(millis() / 1000);`
+`lcd.print(millis() / 1000);`
 
 ## LCD Backpack
 ### Description
