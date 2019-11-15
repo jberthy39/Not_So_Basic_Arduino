@@ -2,7 +2,7 @@
 
 ## New Ping
 ### Description
-In this assignment, I learned to ue a library called [NewPing](https://playground.arduino.cc/Code/NewPing/). In this library, there were many functions, that someone else had created and I could use, without having to type them one at a time. (This library was created by Tim Eckel.) Using these commands and functions from the NewPing library, I had a little bit of freedom in what I wanted my code to do.
+In this assignment, I learned to ue a library called [NewPing](https://playground.arduino.cc/Code/NewPing/). In this library, there were many functions, that someone else had created and I could use, without having to type them one at a time. (This library was created by Tim Eckel.) Using these commands and functions from the NewPing library, I had a little bit of freedom in what I wanted my code to do. When an object was less than 15 centimeters away from the sensor, the LED turned on. If it was more, the LED turned off. All of this coding was made using the NewPing lirary.
 
 ### Wiring Diagram
 ![new ping]()
@@ -19,7 +19,20 @@ In this assignment, we learn how to incorporate a function into our coding. A fu
 
 Credit : [Imogen A.](http://wiki.chssigma.com/index.php?title=Imogen%27s_Engineering_2_Notebook#Hello_Functions) 
 
-`this is some code bla bla bla`
+```
+int getDistance()
+{
+	pinMode(trigPin, OUTPUT);
+	digitalWrite(trigPin, LOW);
+	delayMicroseconds(2);
+	digitalWrite(trigPin, HIGH);
+	delayMicroseconds(10);
+	digitalWrite(trigPin, LOW);
+	pinMode(echoPin, INPUT);
+	timeSinceObject = pulseIn(echoPin, HIGH);
+	return cm;
+}
+```
 
 - This is an example of a function that I used. This function told the Ultrasonic Sensor to send a chirp, recieve it, and then calculate the distance.
 
@@ -45,8 +58,10 @@ lcd.print(millis() / 1000);
 ```
 - The first line of code includes the library we needed to operate the LCD screen. The second code, allows you to print any message onto the screen. And the last section, along with setup code and such, prints the number of second the code or LCD screen has been running.
 
-### Difficultes
+### Difficulties and Lesson(s) Learned
 - In this assignment, the coding was quite simple, granted that most of it was already provided for us. The most taxing and tedious part though was definitely wiring. Cutting and stripping 12 identical wires is not easy or fast.
+ 
+- In this assignment, I learned a little bt about screens and what you do when printing a message on them. 
 
 ## LCD Backpack
 ### Description
@@ -76,9 +91,16 @@ I find that this assignemnt was both challenging, and fun once it started workin
 Credit : [Imogen A.](http://wiki.chssigma.com/index.php?title=Imogen%27s_Engineering_2_Notebook#LED_Blink_Revisited_and_Hello_Serial_Monitor)
 
 ```
-litle snippet of my code
+analogWrite(LED, brightness);
+	brightness = brightness + fadeAmount;
+	delay(100);
+	Serial.println(brightness);
+	if (brightness > 255 || brightness < 0)
+	{
+		fadeAmount = -fadeAmount;
+	}
 ```
-- Here's a little piece of my code -------
+- This was the main part of my code. 
 
 ### Lesson(s) Learned
 - I learned that there are a difference between analogWrite() and digitalWrite() in what their main function is to do.
