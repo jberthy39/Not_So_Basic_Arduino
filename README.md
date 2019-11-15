@@ -2,7 +2,13 @@
 
 ## New Ping
 ### Description
-In this assignment, I learned to ue a library called [NewPing](https://playground.arduino.cc/Code/NewPing/). In this library, there were many functions, that someone else had created and I could use, without having to type them one at a time. (This library was created by Tim Eckel.) 
+In this assignment, I learned to ue a library called [NewPing](https://playground.arduino.cc/Code/NewPing/). In this library, there were many functions, that someone else had created and I could use, without having to type them one at a time. (This library was created by Tim Eckel.) Using these commands and functions from the NewPing library, I had a little bit of freedom in what I wanted my code to do.
+
+### Wiring Diagram
+![new ping]()
+
+### Lesson(s) Learned
+- I learned that sometimes, libraries are essential to you code. When using a library, you shorten your code and make it easier to understand. Instead of huge blocks of code throughout your page, you have functions or other ways that simplify your code to make it more understandable. (No one wants to read through a 9th grader's code that is over 100 lines long.)
 
 ## Hello Functions
 ### Description
@@ -28,9 +34,9 @@ Credit : [Imogen A.](http://wiki.chssigma.com/index.php?title=Imogen%27s_Enginee
 In this assignment, we used an LCD screeen to print a simple message: Hello World!. We also printed the number of seconds or miliseconds the LCD screen had been on and running. With the simple code given to us in the assignment, printing the message was simple, and the rest was google research.
 
 ### Wiring Diagram
-![alt text](http://wiki.chssigma.com/images/thumb/e/e0/Lcdcap1.PNG/800px-Lcdcap1.PNG)
+![alt text](https://raw.githubusercontent.com/adent11/Intermediate-Arduino/master/FritzingDiagrams/Hello_LCDScreenshot.PNG)
 
-Credit : [Paul B.](http://wiki.chssigma.com/index.php?title=Paul%27s_Engineering_2_Notebook#Hello_LCD)
+Credit : [Mehki H.](https://github.com/mhernan80/Engineering_2.1)
 
 ```
 #include <LiquidCrystal.h>
@@ -39,8 +45,8 @@ lcd.print(millis() / 1000);
 ```
 - The first line of code includes the library we needed to operate the LCD screen. The second code, allows you to print any message onto the screen. And the last section, along with setup code and such, prints the number of second the code or LCD screen has been running.
 
-### Lesson(s) Learned
-- In this assignment, I learned that
+### Difficultes
+- In this assignment, the coding was quite simple, granted that most of it was already provided for us. The most taxing and tedious part though was definitely wiring. Cutting and stripping 12 identical wires is not easy or fast.
 
 ## LCD Backpack
 ### Description
@@ -59,4 +65,22 @@ lcd.backlight();
 
 ### Lesson(s) Learned
 - I found out that when there is a backpack to help you, you should always use it. It really helps simplify your wiring and sometimes you code.
+
 ## LED Blink Revistited (Fading LED) 
+### Description
+I find that this assignemnt was both challenging, and fun once it started working. It also helped many of us reconnect with LEDs and coding them. Simply put, we made the LED go from it's brightest (255) to it's dimmest (0). I used diferent variables like brightness (how bright the LED was) and fadeAmount (how much the LED was fading by, the higher the number, the faster it fades) to work with the LED as well. We were also instructed to use analog pins and analogWrite() to make the LED fade, rather than blink. Additionally, we had to make the Serial Monitor print a certain number of "-" or "x" to represent visually the LED brightening and  dimming. 
+
+### Wiring
+![led fade](http://wiki.chssigma.com/images/e/e8/Fritzing_LED_fade.PNG)
+
+Credit : [Imogen A.](http://wiki.chssigma.com/index.php?title=Imogen%27s_Engineering_2_Notebook#LED_Blink_Revisited_and_Hello_Serial_Monitor)
+
+```
+litle snippet of my code
+```
+- Here's a little piece of my code -------
+
+### Lesson(s) Learned
+- I learned that there are a difference between analogWrite() and digitalWrite() in what their main function is to do.
+
+- I also learned that there is a significant difference between Serial.println() and Serial.print(). Serial.println() prints each message on a new line, whereas Serial.print() continuously prints on that same line over and over.
