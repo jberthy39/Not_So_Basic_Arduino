@@ -1,4 +1,4 @@
-# Not_So_Basic_Arduino
+# My *Not So Basic Arduino* Assignments
 
 ## New Ping
 ### Description
