@@ -10,7 +10,7 @@ In this assignment, we learn how to incorporate a function into our coding. A fu
 
 ### Wiring Diagram
 ![hello functions](http://wiki.chssigma.com/images/thumb/5/50/Ultrasonic_Sensor_with_Servo.PNG/600px-Ultrasonic_Sensor_with_Servo.PNG)
-- I got this image from a [student's wiki page](http://wiki.chssigma.com/index.php?title=Imogen%27s_Engineering_2_Notebook#Hello_Functions) 
+Credit : [Imogen A.](http://wiki.chssigma.com/index.php?title=Imogen%27s_Engineering_2_Notebook#Hello_Functions) 
 
 `this is some code bla bla bla`
 
@@ -27,9 +27,9 @@ In this assignment, we learn how to incorporate a function into our coding. A fu
 In this assignment, we used an LCD screeen to print a simple message: Hello World!. We also printed the number of seconds or miliseconds the LCD screen had been on and running. With the simple code given to us in the assignment, printing the message was simple, and the rest was google research.
 
 ### Wiring Diagram
-![alt text](https://camo.githubusercontent.com/24d7af6e68d3662f8630de2a63e731f8774f338a/687474703a2f2f77696b692e6368737369676d612e636f6d2f696d616765732f652f65302f4c6364636170312e504e47)
+![alt text](http://wiki.chssigma.com/images/thumb/e/e0/Lcdcap1.PNG/800px-Lcdcap1.PNG)
 
-- I got this picture from a [student's wiki page](http://wiki.chssigma.com/index.php?title=Paul%27s_Engineering_2_Notebook#Hello_LCD)
+Credit : [Paul B.](http://wiki.chssigma.com/index.php?title=Paul%27s_Engineering_2_Notebook#Hello_LCD)
 
 `#include <LiquidCrystal.h>
 
@@ -41,4 +41,4 @@ lcd.print(millis() / 1000);`
 ### Description
 
 
-## LED Blink Revistited (Fading LED)
+## LED Blink Revistited (Fading LED) 
