@@ -5,7 +5,9 @@
 In this assignment, I learned to ue a library called [NewPing](https://playground.arduino.cc/Code/NewPing/). In this library, there were many functions, that someone else had created and I could use, without having to type them one at a time. (This library was created by Tim Eckel.) Using these commands and functions from the NewPing library, I had a little bit of freedom in what I wanted my code to do. When an object was less than 15 centimeters away from the sensor, the LED turned on. If it was more, the LED turned off. All of this coding was made using the NewPing lirary.
 
 ### Wiring Diagram
-![new ping]()
+![new ping](http://wiki.chssigma.com/images/5/50/Ultrasonic_Sensor_with_Servo.PNG)
+
+Credit : Imogen A.
 
 ### Problems
 - I had difficulty downloading the NewPing library and learning how to access the functions. But after asking google and Mr. H a couple of questions, it was much easier to understand and I figured out how to include it into my code.
