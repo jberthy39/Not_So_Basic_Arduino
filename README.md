@@ -7,6 +7,9 @@ In this assignment, I learned to ue a library called [NewPing](https://playgroun
 ### Wiring Diagram
 ![new ping]()
 
+### Problems
+- I had difficulty downloading the NewPing library and learning how to access the functions. But after asking google and Mr. H a couple of questions, it was much easier to understand and I figured out how to include it into my code.
+
 ### Lesson(s) Learned
 - I learned that sometimes, libraries are essential to you code. When using a library, you shorten your code and make it easier to understand. Instead of huge blocks of code throughout your page, you have functions or other ways that simplify your code to make it more understandable. (No one wants to read through a 9th grader's code that is over 100 lines long.)
 
@@ -36,6 +39,8 @@ int getDistance()
 
 - This is an example of a function that I used. This function told the Ultrasonic Sensor to send a chirp, recieve it, and then calculate the distance.
 
+### Problems
+- I had great difficuly when understanding what the anatomy of a function was and when or hor to use the return command. But by using the following [link](https://www.arduino.cc/en/Reference/FunctionDeclaration), I learned a lot about functions and understood their job/function much better.
 
 ### Lesson(s) Learned
 - The Ultrasonic Sensor sends tiny chirps and uses the pins Echo and Trig to estimate/calculate the distance from any given object. 
@@ -58,10 +63,11 @@ lcd.print(millis() / 1000);
 ```
 - The first line of code includes the library we needed to operate the LCD screen. The second code, allows you to print any message onto the screen. And the last section, along with setup code and such, prints the number of second the code or LCD screen has been running.
 
-### Difficulties and Lesson(s) Learned
+### Problems
 - In this assignment, the coding was quite simple, granted that most of it was already provided for us. The most taxing and tedious part though was definitely wiring. Cutting and stripping 12 identical wires is not easy or fast.
  
-- In this assignment, I learned a little bt about screens and what you do when printing a message on them. 
+### Lesson(s) Learned
+- In this assignment, I learned a little bt about screens and what you do when printing a message on them. I learned that there are rowns and columns on each screen and you can control which parts of the screen turn on. 
 
 ## LCD Backpack
 ### Description
@@ -78,12 +84,15 @@ lcd.backlight();
 ```
 - This was the only coding we had to change once we started using the backpack. Both of these commands would go into your setup.
 
+### Problems
+- My only problem was quite small and just had to do with the additional coding commands that we had to add into our initial code. I just was confused on where I should put the commands *lcd.init()* and *lcd.backlight()*.
+
 ### Lesson(s) Learned
-- I found out that when there is a backpack to help you, you should always use it. It really helps simplify your wiring and sometimes you code.
+- I found out that when there is a backpack to help you, you should use it. It really helps simplify your wiring and sometimes you code.
 
 ## LED Blink Revistited (Fading LED) 
 ### Description
-I find that this assignemnt was both challenging, and fun once it started working. It also helped many of us reconnect with LEDs and coding them. Simply put, we made the LED go from it's brightest (255) to it's dimmest (0). I used diferent variables like brightness (how bright the LED was) and fadeAmount (how much the LED was fading by, the higher the number, the faster it fades) to work with the LED as well. We were also instructed to use analog pins and analogWrite() to make the LED fade, rather than blink. Additionally, we had to make the Serial Monitor print a certain number of "-" or "x" to represent visually the LED brightening and  dimming. 
+I find that this assignemnt was both challenging, and fun once it started working. It also helped many of us reconnect with LEDs and coding them. Simply put, we made the LED go from it's brightest (255) to it's dimmest (0). I used diferent variables like *brightness* (how bright the LED was) and *fadeAmount* (how much the LED was fading by, the higher the number, the faster it fades) to work with the LED as well. We were also instructed to use analog pins and *analogWrite()* to make the LED fade, rather than blink. Additionally, we had to make the Serial Monitor print a certain number of "-" or "x" to represent visually the LED brightening and  dimming. 
 
 ### Wiring
 ![led fade](http://wiki.chssigma.com/images/e/e8/Fritzing_LED_fade.PNG)
@@ -102,7 +111,10 @@ analogWrite(LED, brightness);
 ```
 - This was the main part of my code. 
 
-### Lesson(s) Learned
-- I learned that there are a difference between analogWrite() and digitalWrite() in what their main function is to do.
+### Problems
+- I had many small issues and questions about this assignment. It was very new to me and looking at the [CHS Sigma Wiki](http://wiki.chssigma.com/index.php?title=Engineering_2_Student_Pages) Page really helped me undertand what I needed to do in terms of variable and equatinos. This was the first time I had heard or even used the Student Notebooks. 
 
-- I also learned that there is a significant difference between Serial.println() and Serial.print(). Serial.println() prints each message on a new line, whereas Serial.print() continuously prints on that same line over and over.
+### Lesson(s) Learned
+- I learned that there are a difference between *analogWrite()* and *digitalWrite()* in what their main function is to do.
+
+- I also learned that there is a significant difference between *Serial.println()* and *Serial.print()*. Serial.println() prints each message on a new line, whereas Serial.print() continuously prints on that same line over and over.
