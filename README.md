@@ -10,6 +10,7 @@ In this assignment, we learn how to incorporate a function into our coding. A fu
 
 ### Wiring Diagram
 ![hello functions](http://wiki.chssigma.com/images/thumb/5/50/Ultrasonic_Sensor_with_Servo.PNG/600px-Ultrasonic_Sensor_with_Servo.PNG)
+
 Credit : [Imogen A.](http://wiki.chssigma.com/index.php?title=Imogen%27s_Engineering_2_Notebook#Hello_Functions) 
 
 `this is some code bla bla bla`
@@ -31,14 +32,31 @@ In this assignment, we used an LCD screeen to print a simple message: Hello Worl
 
 Credit : [Paul B.](http://wiki.chssigma.com/index.php?title=Paul%27s_Engineering_2_Notebook#Hello_LCD)
 
-`#include <LiquidCrystal.h> `
+```
+#include <LiquidCrystal.h>
+lcd.print("hello world :)"); 
+lcd.print(millis() / 1000);
+```
+- The first line of code includes the library we needed to operate the LCD screen. The second code, allows you to print any message onto the screen. And the last section, along with setup code and such, prints the number of second the code or LCD screen has been running.
 
-`lcd.print("hello world :)"); `
-
-`lcd.print(millis() / 1000);`
+### Lesson(s) Learned
+- In this assignment, I learned that
 
 ## LCD Backpack
 ### Description
+In this assigment, we used most of the same coding, we just used a backpack instead. In the previous assigment, I had to cut and strip 12 wires to the exact same side and connect each to a different pin. It was tedious and unnecessay work apparently, so the backpack fixes many of these problems. The backpack uses only 2 analog pins to communicate to the LCD screen and also has two pins that connect to GND and 5V.
 
+### Wiring Diagram
+![backpack](http://wiki.chssigma.com/images/thumb/1/16/Lcd_backpack.png/600px-Lcd_backpack.png)
 
+Credit : [Zoe D.](http://wiki.chssigma.com/index.php?title=Zoe%27s_Engineering_Notebook#LCD_Backpack)
+
+```
+lcd.init()
+lcd.backlight();
+```
+- This was the only coding we had to change once we started using the backpack. Both of these commands would go into your setup.
+
+### Lesson(s) Learned
+- I found out that when there is a backpack to help you, you should always use it. It really helps simplify your wiring and sometimes you code.
 ## LED Blink Revistited (Fading LED) 
