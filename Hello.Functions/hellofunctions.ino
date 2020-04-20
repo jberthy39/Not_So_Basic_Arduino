@@ -1,5 +1,10 @@
-#include <Servo.h>
-Servo myServo;
+// Hello Functions
+// Jeanne Berthy
+// This assignment develop you knowledge of the function of functions and when to use them. This piece of code simply tells the servo to rotate 
+// continuously, very fast, and as an object (my hand) moves further away, the servo slows down and then halts to a stop at 45 centimeters.
+// used this link to help me with coding and wirng a servo: [How to Use Servo Motors with Arduino](https://create.arduino.cc/projecthub/Arca_Ege/how-to-use-servo-motors-with-arduino-b02bed)
+#include <Servo.h> // includes the library to use servos
+Servo myServo; //
 int servoData = 0;
 const int trigPin = 11;
 const int echoPin = 8;
