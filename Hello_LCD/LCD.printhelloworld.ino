@@ -1,3 +1,9 @@
+// Hello LCD
+// Jeanne Berthy
+// This assingment simply prints the message, hello world :) on the first row, and then 
+// prints the number of seconds the code has been running, on the second row.
+
+
 #include <LiquidCrystal.h> //Demonstrates the use a 16x2 LCD display. 
 
 LiquidCrystal lcd (7, 8, 9, 10, 11, 12); // initialize the library with the numbers of the interface pins
