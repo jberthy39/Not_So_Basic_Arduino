@@ -1,15 +1,16 @@
 // Hello Functions
 // Jeanne Berthy
-// This assignment develop you knowledge of the function of functions and when to use them. This piece of code simply tells the servo to rotate 
+// This assignment develops your knowledge of the function of functions and when to use them. This piece of code simply tells the servo to rotate 
 // continuously, very fast, and as an object (my hand) moves further away, the servo slows down and then halts to a stop at 45 centimeters.
 // used this link to help me with coding and wirng a servo: https://create.arduino.cc/projecthub/Arca_Ege/how-to-use-servo-motors-with-arduino-b02bed
+
 #include <Servo.h> // includes the library to use servos
 Servo myServo; // create servo object to control the servo
 int servoData = 0; // 
 const int trigPin = 11; // sets the trigpin (ultrasonic sensor) to pin 11
 const int echoPin = 8; // stes the echopin (ultrasonic sensor) to pin 8
 int x = 0; // sets the number of degrees of the servo to 0
-int timeSinceObject; 
+int timeSinceObject; // 
 int duration, cm;
 void setup()
 {
